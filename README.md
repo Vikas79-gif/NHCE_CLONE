@@ -110,6 +110,10 @@ nhce-website/
 
 ## Build & Deployment
 
+### Prerequisites
+- Node.js 20+
+- npm or yarn
+
 ### Local Development
 ```bash
 # Install all dependencies
@@ -163,6 +167,40 @@ vercel --prod
 # Add to vercel.json or .env.local
 NEXT_PUBLIC_APP_URL=https://your-domain.com
 ```
+
+### GitHub Pages Deployment
+For static hosting via GitHub Pages (requires static export):
+
+1. **Enable Static Export** in `next.config.ts`:
+   ```typescript
+   // next.config.ts
+   const nextConfig = {
+     output: 'export',        // Enable static export
+     images: {
+       unoptimized: true,     // Required for static export
+     },
+   };
+   ```
+
+2. **Build and Export**:
+   ```bash
+   npm run build
+   # Output will be in ./out directory
+   ```
+
+3. **Deploy to GitHub Pages**:
+   - Go to **GitHub → Repository Settings → Pages**
+   - Source: **Deploy from a branch**
+   - Branch: **main** (or `gh-pages` branch)
+   - Folder: **/out** (or `/docs` if using docs folder)
+   - Save
+
+4. **Your site will be live at**:
+   ```
+   https://Vikas79-gif.github.io/NHCE_CLONE/
+   ```
+
+> **Note**: GitHub Pages only supports static sites. Features requiring server-side rendering (SSR), API routes, or dynamic content will not work. For full Next.js features, use **Vercel** (recommended).
 
 ## Contribution Guidelines
 
