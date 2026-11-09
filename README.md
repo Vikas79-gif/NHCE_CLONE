@@ -168,6 +168,22 @@ vercel --prod
 NEXT_PUBLIC_APP_URL=https://your-domain.com
 ```
 
+## Website Screenshots
+
+Below are screenshots of the key NHCE website interfaces. Once you upload the corresponding PNG files to the `screenshots/` directory, the images will render automatically.
+
+### Home Page
+![Home Page](screenshots/Home.png "#NHCE Home Page — Hero section with gradient background and CTA")
+
+### Placements
+![Placements Page](screenshots/Placement.png "#NHCE Placements — Campus placements and recruiters")
+
+### Contact
+![Contact Page](screenshots/Contact.png "#NHCE Contact — Multi-channel contact form and information")
+
+### Mega Menu
+![Mega Menu](screenshots/MegaMenu.png "#NHCE Mega Navigation — Full dropdown menu structure")
+
 ### GitHub Pages Deployment
 For static hosting via GitHub Pages (requires static export):
 
